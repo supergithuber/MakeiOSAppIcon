@@ -21,32 +21,58 @@ class ImageTool{
                 consoleIO.writeMessage("please input a 1024*1024 image")
                 return
             }
-//            let icon_1024 = self.resizeImage(image: image, forSize: CGSize(width: 1024, height: 1024))
-//            let icon_83p5_2x = self.resizeImage(image: image, forSize: CGSize(width: 167, height: 167))
-//            let icon_76_2x = self.resizeImage(image: image, forSize: CGSize(width: 152, height: 152))
-//            let icon_76 = self.resizeImage(image: image, forSize: CGSize(width: 76, height: 76))
-//            let icon_72_2x = self.resizeImage(image: image, forSize: CGSize(width: 144, height: 144))
-//            let icon_72 = self.resizeImage(image: image, forSize: CGSize(width: 72, height: 72))
-//            let icon_60_3x = self.resizeImage(image: image, forSize: CGSize(width: 180, height: 180))
-//            let icon_60_2x = self.resizeImage(image: image, forSize: CGSize(width: 120, height: 120))
-//            let icon_57_2x = self.resizeImage(image: image, forSize: CGSize(width: 114, height: 114))
-//            let icon_57 = self.resizeImage(image: image, forSize: CGSize(width: 57, height: 57))
-//            let icon_50_2x = self.resizeImage(image: image, forSize: CGSize(width: 100, height: 100))
-//            let icon_50 = self.resizeImage(image: image, forSize: CGSize(width: 50, height: 50))
-//            let icon_40_3x = self.resizeImage(image: image, forSize: CGSize(width: 120, height: 120))
-//            let icon_40_2x = self.resizeImage(image: image, forSize: CGSize(width: 80, height: 80))
-//            let icon_40 = self.resizeImage(image: image, forSize: CGSize(width: 40, height: 40))
-//            let icon_29_3x = self.resizeImage(image: image, forSize: CGSize(width: 87, height: 87))
-//            let icon_29_2x = self.resizeImage(image: image, forSize: CGSize(width: 58, height: 58))
-//            let icon_29_2x_ipad = self.resizeImage(image: image, forSize: CGSize(width: 58, height: 58))
-//            let icon_29 = self.resizeImage(image: image, forSize: CGSize(width: 29, height: 29))
-//            let icon_29_ipad = self.resizeImage(image: image, forSize: CGSize(width: 29, height: 29))
-//            let icon_20_3x = self.resizeImage(image: image, forSize: CGSize(width: 60, height: 60))
-//            let icon_20_2x = self.resizeImage(image: image, forSize: CGSize(width: 40, height: 40))
-//            let icon_20_2x_ipad = self.resizeImage(image: image, forSize: CGSize(width: 40, height: 40))
+            let icon_1024 = self.resizeImage(image: image, forSize: CGSize(width: 1024, height: 1024))
+            let icon_83p5_2x = self.resizeImage(image: image, forSize: CGSize(width: 167, height: 167))
+            let icon_76_2x = self.resizeImage(image: image, forSize: CGSize(width: 152, height: 152))
+            let icon_76 = self.resizeImage(image: image, forSize: CGSize(width: 76, height: 76))
+            let icon_72_2x = self.resizeImage(image: image, forSize: CGSize(width: 144, height: 144))
+            let icon_72 = self.resizeImage(image: image, forSize: CGSize(width: 72, height: 72))
+            let icon_60_3x = self.resizeImage(image: image, forSize: CGSize(width: 180, height: 180))
+            let icon_60_2x = self.resizeImage(image: image, forSize: CGSize(width: 120, height: 120))
+            let icon_57_2x = self.resizeImage(image: image, forSize: CGSize(width: 114, height: 114))
+            let icon_57 = self.resizeImage(image: image, forSize: CGSize(width: 57, height: 57))
+            let icon_50_2x = self.resizeImage(image: image, forSize: CGSize(width: 100, height: 100))
+            let icon_50 = self.resizeImage(image: image, forSize: CGSize(width: 50, height: 50))
+            let icon_40_3x = self.resizeImage(image: image, forSize: CGSize(width: 120, height: 120))
+            let icon_40_2x = self.resizeImage(image: image, forSize: CGSize(width: 80, height: 80))
+            let icon_40 = self.resizeImage(image: image, forSize: CGSize(width: 40, height: 40))
+            let icon_29_3x = self.resizeImage(image: image, forSize: CGSize(width: 87, height: 87))
+            let icon_29_2x = self.resizeImage(image: image, forSize: CGSize(width: 58, height: 58))
+            let icon_29_2x_ipad = self.resizeImage(image: image, forSize: CGSize(width: 58, height: 58))
+            let icon_29 = self.resizeImage(image: image, forSize: CGSize(width: 29, height: 29))
+            let icon_29_ipad = self.resizeImage(image: image, forSize: CGSize(width: 29, height: 29))
+            let icon_20_3x = self.resizeImage(image: image, forSize: CGSize(width: 60, height: 60))
+            let icon_20_2x = self.resizeImage(image: image, forSize: CGSize(width: 40, height: 40))
+            let icon_20_2x_ipad = self.resizeImage(image: image, forSize: CGSize(width: 40, height: 40))
             let icon_20_ipad = self.resizeImage(image: image, forSize: CGSize(width: 20, height: 20))
             
+            writeToFolder(image: icon_1024, fileName: "icon-1024.png")
+            writeToFolder(image: icon_83p5_2x, fileName: "icon-83.5@2x.png")
+            writeToFolder(image: icon_76_2x, fileName: "icon-76@2x.png")
+            writeToFolder(image: icon_76, fileName: "icon-76.png")
+            writeToFolder(image: icon_72_2x, fileName: "icon-72@2x.png")
+            writeToFolder(image: icon_72, fileName: "icon-72.png")
+            writeToFolder(image: icon_60_3x, fileName: "icon-60@3x.png")
+            writeToFolder(image: icon_60_2x, fileName: "icon-60@2x.png")
+            writeToFolder(image: icon_57_2x, fileName: "icon-57@2x.png")
+            writeToFolder(image: icon_57, fileName: "icon-57.png")
+            writeToFolder(image: icon_50_2x, fileName: "icon-50@2x.png")
+            writeToFolder(image: icon_50, fileName: "icon-50.png")
+            writeToFolder(image: icon_40_3x, fileName: "icon-40@3x.png")
+            writeToFolder(image: icon_40_2x, fileName: "icon-40@2x.png")
+            writeToFolder(image: icon_40, fileName: "icon-40.png")
+            writeToFolder(image: icon_29_3x, fileName: "icon-29@3x.png")
+            writeToFolder(image: icon_29_2x, fileName: "icon-29@2x.png")
+            writeToFolder(image: icon_29_2x_ipad, fileName: "icon-29@2x-ipad.png")
+            writeToFolder(image: icon_29, fileName: "icon-29.png")
+            writeToFolder(image: icon_29_ipad, fileName: "icon-29-ipad.png")
+            writeToFolder(image: icon_20_3x, fileName: "icon-20@3x.png")
+            writeToFolder(image: icon_20_2x, fileName: "icon-20@2x.png")
+            writeToFolder(image: icon_20_2x_ipad, fileName: "icon-20@2x-ipad.png")
             writeToFolder(image: icon_20_ipad, fileName: "icon-20-ipad.png")
+            
+            
+            saveJsonToFolder()
         }
         
     }
@@ -88,7 +114,7 @@ class ImageTool{
         newImage.unlockFocus()
         return newImage
     }
-    
+    //图片写入文件
     func writeToFolder(image: NSImage, fileName: String){
         let folderPath = fileManager.currentDirectoryPath + "/AppIcon.appiconset"
         if !fileManager.fileExists(atPath: folderPath){
@@ -110,6 +136,14 @@ class ImageTool{
             print("write file error:\(error)")
         }
         
+        
+    }
+    //json写入文件夹
+    func saveJsonToFolder(){
+        let folderPath = fileManager.currentDirectoryPath + "/AppIcon.appiconset"
+        if let path = Bundle.main.path(forResource: "Contents", ofType: "json") {
+            try? fileManager.copyItem(at: URL(fileURLWithPath: path), to: URL(fileURLWithPath: folderPath + "/Contents.json"))
+        }
         
     }
     
