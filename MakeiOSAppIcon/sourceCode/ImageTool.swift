@@ -21,32 +21,32 @@ class ImageTool{
                 consoleIO.writeMessage("please input a 1024*1024 image")
                 return
             }
-            let icon_1024 = self.resizeImage(image: image, forSize: CGSize(width: 1024, height: 1024))
-            let icon_83p5_2x = self.resizeImage(image: image, forSize: CGSize(width: 167, height: 167))
-            let icon_76_2x = self.resizeImage(image: image, forSize: CGSize(width: 152, height: 152))
-            let icon_76 = self.resizeImage(image: image, forSize: CGSize(width: 76, height: 76))
-            let icon_72_2x = self.resizeImage(image: image, forSize: CGSize(width: 144, height: 144))
-            let icon_72 = self.resizeImage(image: image, forSize: CGSize(width: 72, height: 72))
-            let icon_60_3x = self.resizeImage(image: image, forSize: CGSize(width: 180, height: 180))
-            let icon_60_2x = self.resizeImage(image: image, forSize: CGSize(width: 120, height: 120))
-            let icon_57_2x = self.resizeImage(image: image, forSize: CGSize(width: 114, height: 114))
-            let icon_57 = self.resizeImage(image: image, forSize: CGSize(width: 57, height: 57))
-            let icon_50_2x = self.resizeImage(image: image, forSize: CGSize(width: 100, height: 100))
-            let icon_50 = self.resizeImage(image: image, forSize: CGSize(width: 50, height: 50))
-            let icon_40_3x = self.resizeImage(image: image, forSize: CGSize(width: 120, height: 120))
-            let icon_40_2x = self.resizeImage(image: image, forSize: CGSize(width: 80, height: 80))
-            let icon_40 = self.resizeImage(image: image, forSize: CGSize(width: 40, height: 40))
-            let icon_29_3x = self.resizeImage(image: image, forSize: CGSize(width: 87, height: 87))
-            let icon_29_2x = self.resizeImage(image: image, forSize: CGSize(width: 58, height: 58))
-            let icon_29_2x_ipad = self.resizeImage(image: image, forSize: CGSize(width: 58, height: 58))
-            let icon_29 = self.resizeImage(image: image, forSize: CGSize(width: 29, height: 29))
-            let icon_29_ipad = self.resizeImage(image: image, forSize: CGSize(width: 29, height: 29))
-            let icon_20_3x = self.resizeImage(image: image, forSize: CGSize(width: 60, height: 60))
-            let icon_20_2x = self.resizeImage(image: image, forSize: CGSize(width: 40, height: 40))
-            let icon_20_2x_ipad = self.resizeImage(image: image, forSize: CGSize(width: 40, height: 40))
+//            let icon_1024 = self.resizeImage(image: image, forSize: CGSize(width: 1024, height: 1024))
+//            let icon_83p5_2x = self.resizeImage(image: image, forSize: CGSize(width: 167, height: 167))
+//            let icon_76_2x = self.resizeImage(image: image, forSize: CGSize(width: 152, height: 152))
+//            let icon_76 = self.resizeImage(image: image, forSize: CGSize(width: 76, height: 76))
+//            let icon_72_2x = self.resizeImage(image: image, forSize: CGSize(width: 144, height: 144))
+//            let icon_72 = self.resizeImage(image: image, forSize: CGSize(width: 72, height: 72))
+//            let icon_60_3x = self.resizeImage(image: image, forSize: CGSize(width: 180, height: 180))
+//            let icon_60_2x = self.resizeImage(image: image, forSize: CGSize(width: 120, height: 120))
+//            let icon_57_2x = self.resizeImage(image: image, forSize: CGSize(width: 114, height: 114))
+//            let icon_57 = self.resizeImage(image: image, forSize: CGSize(width: 57, height: 57))
+//            let icon_50_2x = self.resizeImage(image: image, forSize: CGSize(width: 100, height: 100))
+//            let icon_50 = self.resizeImage(image: image, forSize: CGSize(width: 50, height: 50))
+//            let icon_40_3x = self.resizeImage(image: image, forSize: CGSize(width: 120, height: 120))
+//            let icon_40_2x = self.resizeImage(image: image, forSize: CGSize(width: 80, height: 80))
+//            let icon_40 = self.resizeImage(image: image, forSize: CGSize(width: 40, height: 40))
+//            let icon_29_3x = self.resizeImage(image: image, forSize: CGSize(width: 87, height: 87))
+//            let icon_29_2x = self.resizeImage(image: image, forSize: CGSize(width: 58, height: 58))
+//            let icon_29_2x_ipad = self.resizeImage(image: image, forSize: CGSize(width: 58, height: 58))
+//            let icon_29 = self.resizeImage(image: image, forSize: CGSize(width: 29, height: 29))
+//            let icon_29_ipad = self.resizeImage(image: image, forSize: CGSize(width: 29, height: 29))
+//            let icon_20_3x = self.resizeImage(image: image, forSize: CGSize(width: 60, height: 60))
+//            let icon_20_2x = self.resizeImage(image: image, forSize: CGSize(width: 40, height: 40))
+//            let icon_20_2x_ipad = self.resizeImage(image: image, forSize: CGSize(width: 40, height: 40))
             let icon_20_ipad = self.resizeImage(image: image, forSize: CGSize(width: 20, height: 20))
             
-            
+            writeToFolder(image: icon_20_ipad, fileName: "icon-20-ipad.png")
         }
         
     }
@@ -87,6 +87,30 @@ class ImageTool{
         image.draw(in: thumbnailRect, from: imageRect, operation: .copy, fraction: 1.0)
         newImage.unlockFocus()
         return newImage
+    }
+    
+    func writeToFolder(image: NSImage, fileName: String){
+        let folderPath = fileManager.currentDirectoryPath + "/AppIcon.appiconset"
+        if !fileManager.fileExists(atPath: folderPath){
+            do{
+                try fileManager.createDirectory(atPath: folderPath, withIntermediateDirectories: true, attributes: nil)
+            }catch {
+                consoleIO.writeMessage("create folder failed")
+                return
+            }
+        }
+        guard let imageDate = image.tiffRepresentation else {return}
+        guard let imageRep = NSBitmapImageRep(data: imageDate)else {return}
+        imageRep.size = image.size
+        
+        guard let newImageData = imageRep.representation(using: .png, properties: [:])else {return}
+        do {
+            try newImageData.write(to: URL.init(fileURLWithPath: folderPath + "/\(fileName)"))
+        }catch let error{
+            print("write file error:\(error)")
+        }
+        
+        
     }
     
 }
