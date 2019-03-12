@@ -27,7 +27,6 @@
 
 /* Begin PBXFileReference section */
 		C71433AA22365C0000490BB7 /* ImageTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTool.swift; sourceTree = "<group>"; };
-		C71433AE22374E0400490BB7 /* Contents.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
 		C75A9CBA223120F800489C16 /* MakeiOSAppIcon */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MakeiOSAppIcon; sourceTree = BUILT_PRODUCTS_DIR; };
 		C75A9CBD223120F800489C16 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		C77A03B62235F60F009017F0 /* ConsoleIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleIO.swift; sourceTree = "<group>"; };
@@ -55,14 +54,6 @@
 			path = sourceCode;
 			sourceTree = "<group>";
 		};
-		C71433AD22374DF700490BB7 /* JsonFile */ = {
-			isa = PBXGroup;
-			children = (
-				C71433AE22374E0400490BB7 /* Contents.json */,
-			);
-			path = JsonFile;
-			sourceTree = "<group>";
-		};
 		C75A9CB1223120F800489C16 = {
 			isa = PBXGroup;
 			children = (
@@ -82,7 +73,6 @@
 		C75A9CBC223120F800489C16 /* MakeiOSAppIcon */ = {
 			isa = PBXGroup;
 			children = (
-				C71433AD22374DF700490BB7 /* JsonFile */,
 				C71433AC22374DEE00490BB7 /* sourceCode */,
 				C75A9CBD223120F800489C16 /* main.swift */,
 			);

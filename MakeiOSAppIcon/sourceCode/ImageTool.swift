@@ -9,6 +9,31 @@
 import Foundation
 import AppKit
 
+private let icon_1024_imageName = "icon-1024.png"
+private let icon_83p5_2x_imageName = "icon-83.5@2x.png"
+private let icon_76_2x_imageName = "icon-76@2x.png"
+private let icon_76_imageName = "icon-76.png"
+private let icon_72_2x_imageName = "icon-72@2x.png"
+private let icon_72_imageName = "icon-72.png"
+private let icon_60_3x_imageName = "icon-60@3x.png"
+private let icon_60_2x_imageName = "icon-60@2x.png"
+private let icon_57_2x_imageName = "icon-57@2x.png"
+private let icon_57_imageName = "icon-57.png"
+private let icon_50_2x_imageName = "icon-50@2x.png"
+private let icon_50_imageName = "icon-50.png"
+private let icon_40_3x_imageName = "icon-40@3x.png"
+private let icon_40_2x_imageName = "icon-40@2x.png"
+private let icon_40_imageName = "icon-40.png"
+private let icon_29_3x_imageName = "icon-29@3x.png"
+private let icon_29_2x_imageName = "icon-29@2x.png"
+private let icon_29_2x_ipad_imageName = "icon-29@2x-ipad.png"
+private let icon_29_imageName = "icon-29.png"
+private let icon_29_ipad_imageName = "icon-29-ipad.png"
+private let icon_20_3x_imageName = "icon-20@3x.png"
+private let icon_20_2x_imageName = "icon-20@2x.png"
+private let icon_20_2x_ipad_imageName = "icon-20@2x-ipad.png"
+private let icon_20_ipad_imageName = "icon-20-ipad.png"
+
 class ImageTool{
     
     let fileManager = FileManager.default
@@ -46,30 +71,30 @@ class ImageTool{
             let icon_20_2x_ipad = self.resizeImage(image: image, forSize: CGSize(width: 40, height: 40))
             let icon_20_ipad = self.resizeImage(image: image, forSize: CGSize(width: 20, height: 20))
             
-            writeToFolder(image: icon_1024, fileName: "icon-1024.png")
-            writeToFolder(image: icon_83p5_2x, fileName: "icon-83.5@2x.png")
-            writeToFolder(image: icon_76_2x, fileName: "icon-76@2x.png")
-            writeToFolder(image: icon_76, fileName: "icon-76.png")
-            writeToFolder(image: icon_72_2x, fileName: "icon-72@2x.png")
-            writeToFolder(image: icon_72, fileName: "icon-72.png")
-            writeToFolder(image: icon_60_3x, fileName: "icon-60@3x.png")
-            writeToFolder(image: icon_60_2x, fileName: "icon-60@2x.png")
-            writeToFolder(image: icon_57_2x, fileName: "icon-57@2x.png")
-            writeToFolder(image: icon_57, fileName: "icon-57.png")
-            writeToFolder(image: icon_50_2x, fileName: "icon-50@2x.png")
-            writeToFolder(image: icon_50, fileName: "icon-50.png")
-            writeToFolder(image: icon_40_3x, fileName: "icon-40@3x.png")
-            writeToFolder(image: icon_40_2x, fileName: "icon-40@2x.png")
-            writeToFolder(image: icon_40, fileName: "icon-40.png")
-            writeToFolder(image: icon_29_3x, fileName: "icon-29@3x.png")
-            writeToFolder(image: icon_29_2x, fileName: "icon-29@2x.png")
-            writeToFolder(image: icon_29_2x_ipad, fileName: "icon-29@2x-ipad.png")
-            writeToFolder(image: icon_29, fileName: "icon-29.png")
-            writeToFolder(image: icon_29_ipad, fileName: "icon-29-ipad.png")
-            writeToFolder(image: icon_20_3x, fileName: "icon-20@3x.png")
-            writeToFolder(image: icon_20_2x, fileName: "icon-20@2x.png")
-            writeToFolder(image: icon_20_2x_ipad, fileName: "icon-20@2x-ipad.png")
-            writeToFolder(image: icon_20_ipad, fileName: "icon-20-ipad.png")
+            writeToFolder(image: icon_1024, fileName: icon_1024_imageName)
+            writeToFolder(image: icon_83p5_2x, fileName: icon_83p5_2x_imageName)
+            writeToFolder(image: icon_76_2x, fileName: icon_76_2x_imageName)
+            writeToFolder(image: icon_76, fileName: icon_76_imageName)
+            writeToFolder(image: icon_72_2x, fileName: icon_72_2x_imageName)
+            writeToFolder(image: icon_72, fileName: icon_72_imageName)
+            writeToFolder(image: icon_60_3x, fileName: icon_60_3x_imageName)
+            writeToFolder(image: icon_60_2x, fileName: icon_60_2x_imageName)
+            writeToFolder(image: icon_57_2x, fileName: icon_57_2x_imageName)
+            writeToFolder(image: icon_57, fileName: icon_57_imageName)
+            writeToFolder(image: icon_50_2x, fileName: icon_50_2x_imageName)
+            writeToFolder(image: icon_50, fileName: icon_50_imageName)
+            writeToFolder(image: icon_40_3x, fileName: icon_40_3x_imageName)
+            writeToFolder(image: icon_40_2x, fileName: icon_40_2x_imageName)
+            writeToFolder(image: icon_40, fileName: icon_40_imageName)
+            writeToFolder(image: icon_29_3x, fileName: icon_29_3x_imageName)
+            writeToFolder(image: icon_29_2x, fileName: icon_29_2x_imageName)
+            writeToFolder(image: icon_29_2x_ipad, fileName: icon_29_2x_ipad_imageName)
+            writeToFolder(image: icon_29, fileName: icon_29_imageName)
+            writeToFolder(image: icon_29_ipad, fileName: icon_29_ipad_imageName)
+            writeToFolder(image: icon_20_3x, fileName: icon_20_3x_imageName)
+            writeToFolder(image: icon_20_2x, fileName: icon_20_2x_imageName)
+            writeToFolder(image: icon_20_2x_ipad, fileName: icon_20_2x_ipad_imageName)
+            writeToFolder(image: icon_20_ipad, fileName: icon_20_ipad_imageName)
             
             
             saveJsonToFolder()
@@ -141,9 +166,36 @@ class ImageTool{
     //json写入文件夹
     func saveJsonToFolder(){
         let folderPath = fileManager.currentDirectoryPath + "/AppIcon.appiconset"
-        if let path = Bundle.main.path(forResource: "Contents", ofType: "json") {
-            try? fileManager.copyItem(at: URL(fileURLWithPath: path), to: URL(fileURLWithPath: folderPath + "/Contents.json"))
-        }
+        let dict: [String : Any] = ["images":[["size":"20x20","idiom":"iphone","filename":icon_20_2x_imageName,"scale":"2x"],
+                                              ["size":"20x20","idiom":"iphone","filename":icon_20_3x_imageName,"scale":"3x"],
+                                              ["size":"29x29","idiom":"iphone","filename":icon_29_imageName,"scale":"1x"],
+                                              ["size":"29x29","idiom":"iphone","filename":icon_29_2x_imageName,"scale":"2x"],
+                                              ["size":"29x29","idiom":"iphone","filename":icon_29_3x_imageName,"scale":"3x"],
+                                              ["size":"40x40","idiom":"iphone","filename":icon_40_2x_imageName,"scale":"2x"],
+                                              ["size":"40x40","idiom":"iphone","filename":icon_40_3x_imageName,"scale":"3x"],
+                                              ["size":"57x57","idiom":"iphone","filename":icon_57_imageName,"scale":"1x"],
+                                              ["size":"57x57","idiom":"iphone","filename":icon_57_2x_imageName,"scale":"2x"],
+                                              ["size":"60x60","idiom":"iphone","filename":icon_60_2x_imageName,"scale":"2x"],
+                                              ["size":"60x60","idiom":"iphone","filename":icon_60_3x_imageName,"scale":"3x"],
+                                              ["size":"20x20","idiom":"ipad","filename":icon_20_ipad_imageName,"scale":"1x"],
+                                              ["size":"20x20","idiom":"ipad","filename":icon_20_2x_ipad_imageName,"scale":"2x"],
+                                              ["size":"29x29","idiom":"ipad","filename":icon_29_ipad_imageName,"scale":"1x"],
+                                              ["size":"29x29","idiom":"ipad","filename":icon_29_2x_ipad_imageName,"scale":"2x"],
+                                              ["size":"40x40","idiom":"ipad","filename":icon_40_imageName,"scale":"1x"],
+                                              ["size":"40x40","idiom":"ipad","filename":icon_40_2x_imageName,"scale":"2x"],
+                                              ["size":"50x50","idiom":"ipad","filename":icon_50_imageName,"scale":"1x"],
+                                              ["size":"50x50","idiom":"ipad","filename":icon_50_2x_imageName,"scale":"2x"],
+                                              ["size":"72x72","idiom":"ipad","filename":icon_72_imageName,"scale":"1x"],
+                                              ["size":"72x72","idiom":"ipad","filename":icon_72_2x_imageName,"scale":"2x"],
+                                              ["size":"76x76","idiom":"ipad","filename":icon_76_imageName,"scale":"1x"],
+                                              ["size":"76x76","idiom":"ipad","filename":icon_76_2x_imageName,"scale":"2x"],
+                                              ["size":"83.5x83.5","idiom":"ipad","filename":icon_83p5_2x_imageName,"scale":"2x"],
+                                              ["size":"1027x1027","idiom":"ipad","filename":icon_1024_imageName,"scale":"1x"]],
+                                    "info:":["version":1,
+                                             "author":"sivanwu"]] as [String : Any]
+        guard let jsonDict = try? JSONSerialization.data(withJSONObject: dict, options: .prettyPrinted) else {return}
+        try? jsonDict.write(to: URL(fileURLWithPath: folderPath + "/Contents.json"))
+        
         
     }
     
